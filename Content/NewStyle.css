@@ -52,14 +52,25 @@ h1, h2 {
 /* Section Styling */
 .section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Stack content vertically (heading above image) */
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Align content at the top */
     border: 2px solid #ccc;
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
     background-color: white;
+    min-height: 150px; /* Ensure the section has enough height */
 }
+
+    /* Heading Styling */
+    .section h1 {
+        font-size: 1.5rem; /* Adjust font size */
+        text-align: left;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove padding */
+        width: 100%; /* Ensure it takes up full width */
+    }
 
     /* Image Styling */
     .section img {
@@ -67,6 +78,7 @@ h1, h2 {
         height: 150px;
         object-fit: cover;
         transition: transform 0.5s ease;
+        margin-top: 10px; /* Ensure some space above the image */
     }
 
         /* Flip Image Effect */
@@ -74,19 +86,60 @@ h1, h2 {
             transform: scaleX(-1); /* Flips the image */
         }
 
-/* Alternating Image Positions */
+/* Specific Styling for Left and Right Alignment of Images */
 .image-left {
-    order: -1;
+    margin-right: 20px; /* Ensure some space between image and text */
 }
 
-/* Section 3: Fix Heading Position and Column Layout */
-.section h1 {
-    font-size: 2rem; /* Adjust font size */
-    text-align: left;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove padding */
+.image-right {
+    margin-left: 20px; /* Ensure some space between image and text */
+}/* Section Styling */
+.section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically (heading above image) */
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Align content at the top */
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    min-height: 150px; /* Ensure the section has enough height */
 }
 
+    /* Heading Styling */
+    .section h1 {
+        font-size: 1.5rem; /* Adjust font size */
+        text-align: left;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove padding */
+        width: 100%; /* Ensure it takes up full width */
+    }
+
+    /* Image Styling */
+    .section img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        margin-top: 10px; /* Ensure some space above the image */
+    }
+
+        /* Flip Image Effect */
+        .section img:hover {
+            transform: scaleX(-1); /* Flips the image */
+        }
+
+/* Specific Styling for Left and Right Alignment of Images */
+.image-left {
+    margin-right: 20px; /* Ensure some space between image and text */
+}
+
+.image-right {
+    margin-left: 20px; /* Ensure some space between image and text */
+}
+
+/* Column Layout Styling */
 .modules-columns {
     display: flex;
     justify-content: space-between;
