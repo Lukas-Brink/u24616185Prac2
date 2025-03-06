@@ -79,6 +79,40 @@ h1, h2 {
     order: -1;
 }
 
+/* Section 3: Fix Heading Position and Column Layout */
+.section h1 {
+    font-size: 2rem; /* Adjust font size */
+    text-align: left;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding */
+}
+
+.modules-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Ensure there's a gap between columns */
+    width: 100%;
+}
+
+    .modules-columns div {
+        width: 45%; /* Each column takes 45% of the container */
+    }
+
+    .modules-columns h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+
+    .modules-columns ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .modules-columns li {
+        margin: 0.5rem 0;
+    }
+
 /* Table Styling */
 table {
     width: 80%;
@@ -105,10 +139,19 @@ th {
     }
 
     .section {
-        flex-direction: column;
+        flex-direction: column; /* Stack section content vertically */
+        align-items: flex-start; /* Align content to the left */
     }
 
         .section img {
             margin-bottom: 10px;
+        }
+
+    .modules-columns {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+        .modules-columns div {
+            width: 100%; /* Make each column full width */
         }
 }
