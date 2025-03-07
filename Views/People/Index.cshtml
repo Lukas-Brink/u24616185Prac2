@@ -4,7 +4,31 @@
     ViewBag.Title = "List of People";
 }
 
+<style>
+    body {
+        background-color: #d4edda; /* Light green background */
+    }
 
+    /* Dark green table header */
+    thead {
+        background-color: #218838;
+        color: white;
+    }
+
+    /* Green button styles */
+    .btn-green {
+        background-color: #28a745; /* Bootstrap success green */
+        color: white;
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+        .btn-green:hover {
+            background-color: #1e7e34; /* Darker green on hover */
+        }
+</style>
 
 <h2 class="text-center">List of People</h2>
 
@@ -27,10 +51,9 @@
                 <td>@person.LastName</td>
                 <td>@person.EmailAddress</td>
                 <td>
-                    <a href="@Url.Content(person.MyLink)" class="btn btn-link" target="_blank">LINK</a>
+                    <a href="@Url.Content(person.MyLink)" class="btn-green" target="_blank">LINK</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
